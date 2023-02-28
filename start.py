@@ -63,7 +63,10 @@ def satart():
 	parse.add_argument('-start','--start',help='Start Brout Forse Random ',action='store_true')
 	args=parse.parse_args()
 	if args.start:
-		brute()
+                try:
+                    brute()
+                except:
+                    sys.exit()
 if(__name__ == '__main__'):
 		satart()
 		
